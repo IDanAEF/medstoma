@@ -1,0 +1,260 @@
+@media (max-width: 1800px)
+    .text
+        &_fz 
+            &90
+                font-size: 70px
+            &100
+                font-size: 80px
+    .header
+        &__cats
+            grid-template: auto / repeat(6, 1fr)
+        &__bottom 
+            &-btns 
+                flex-direction: column
+                .btn 
+                    flex: 1
+                    width: 100%
+@media (max-width: 1700px)
+    .container
+        padding-left: 50px
+        padding-right: 50px
+    body 
+        font-size: 16px
+    h1, h2
+        font-size: 40px
+    h3, h4
+        font-size: 20px
+    h5 
+        font-size: 16px
+    .text 
+        &_fz
+            &18
+                font-size: 16px
+            &24
+                font-size: 20px
+            &40
+                font-size: 32px
+            &48
+                font-size: 40px
+            &90
+                font-size: 55px
+            &100
+                font-size: 65px
+    .header
+        &__logo 
+            width: 270px
+            min-width: 270px
+        &__cats 
+            grid-template: auto / repeat(5, 1fr)
+@media (max-width: 1400px)
+    h6 
+        font-size: 14px
+    .text
+        &_fz 
+            &16
+                font-size: 14px
+            &90, &100
+                font-size: 50px
+    .header
+        &__logo 
+            order: 1
+        &__bottom 
+            flex-wrap: wrap
+            &-info 
+                order: 3
+                width: 100%
+                justify-content: space-between
+            &-btns
+                flex-direction: row
+                align-items: center
+                order: 2
+                .btn 
+                    width: fit-content
+                    flex: unset
+    .footer
+        .header
+            &__logo, &__bottom-info 
+                order: unset
+            &__bottom 
+                &-info 
+                    justify-content: flex-end
+        &__nav 
+            & > ul
+                flex-wrap: wrap
+                justify-content: flex-start
+@media (max-width: 1200px) 
+    .default-text
+        h2, h3, h4, h5, h6
+            margin-top: 24px
+            margin-bottom: 16px
+        p 
+            margin: 16px 0px
+        table
+            margin: 16px 0px
+            td 
+                padding: 5px
+        ol, ul 
+            margin: 16px 0px
+    .slider
+        &-arrows
+            &-item 
+                width: 40px
+                height: 40px
+                min-width: 40px
+    .header
+        &__cats 
+            grid-template: auto / repeat(4, 1fr)
+            &-item 
+                padding: 12px
+                img 
+                    width: 100px
+                    height: 100px
+    .footer
+        &__bott, &__nav 
+            margin-top: 32px
+        &__nav 
+            font-size: 14px
+@media (max-width: 992px) 
+    .container
+        padding-left: 25px
+        padding-right: 25px
+    h1, h2
+        font-size: 24px
+    h3, h4
+        font-size: 16px
+    h5 
+        font-size: 14px
+    body 
+        font-size: 14px
+    .text 
+        &_fz
+            &18
+                font-size: 14px
+            &24
+                font-size: 16px
+            &40, &48
+                font-size: 24px
+    .page
+        &__block 
+            padding-top: 35px
+            padding-bottom: 35px
+            &.pt100
+                padding-top: 70px
+            &.pb100
+                padding-bottom: 70px
+        &__title 
+            margin-bottom: 24px
+    .header
+        padding-bottom: 35px
+        &__logo 
+            width: 230px
+            min-width: 230px
+        &__top 
+            &-nav 
+                ul 
+                    flex-wrap: wrap
+@media (max-width: 768px)
+    .page-wrap
+        padding-top: 83px
+    .header
+        &__top 
+            display: none
+        &__burger
+            display: flex
+        &__bottom
+            margin: 0
+            padding: 8px 25px
+            justify-content: flex-start
+            gap: 16px
+            position: fixed
+            z-index: 10
+            width: 100%
+            left: 0
+            top: 0
+            background: $white
+            box-shadow: 0 0px 9px 1px rgba(0, 0, 0, 0.2)
+        &__banner 
+            padding: 16px
+            margin-top: 16px
+            &, &-text
+                flex-direction: column
+                align-items: flex-start
+                gap: 16px
+        &__bar 
+            gap: 16px 8px
+            margin-top: 16px
+        &__cats 
+            grid-template: auto / repeat(3, 1fr)
+            margin-top: 16px
+            &-item 
+                img 
+                    width: 80px
+                    height: 80px
+        .header
+            &__bottom
+                &-info, &-btns 
+                    display: none
+    .footer
+        padding: 16px 0px
+        .header
+            &__bottom
+                &-info
+                    justify-content: flex-start
+        &__top 
+            gap: 16px
+            flex-direction: column
+            align-items: flex-start
+@media (max-width: 576px) 
+    .container
+        padding-left: 15px
+        padding-right: 15px
+    .modal
+        &__close 
+            width: 23px
+            height: 23px
+            right: 0
+    .page-wrap
+        padding-top: 70px
+    .page
+        &__block 
+            padding-top: 24px
+            padding-bottom: 24px
+            &.pt100
+                padding-top: 48px
+            &.pb100
+                padding-bottom: 48px
+    .header
+        &__cats 
+            grid-template: auto / 1fr 1fr
+            &-item 
+                font-size: 14px
+                img 
+                    width: 62px
+                    height: 62px
+        &__bottom
+            padding: 6px 15px
+            &-info 
+                flex-direction: column
+        &__burger
+            width: 50px
+            height: 50px
+            min-width: 50px
+        &__logo 
+            width: 190px
+            min-width: 190px
+            span 
+                font-size: 12px
+        &__bar 
+            flex-wrap: wrap
+            & > .btn 
+                flex: 1
+            &-search
+                order: 3
+                width: 100%
+                flex: unset
+    .footer
+        &__nav 
+            & > ul 
+                flex-direction: column
+                gap: 16px
+// @media (max-width: 370px)

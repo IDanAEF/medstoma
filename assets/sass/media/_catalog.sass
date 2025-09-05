@@ -1,0 +1,45 @@
+@media (max-width: 1700px)
+    .catalog
+        &__list
+            &-items 
+                gap: 8px
+@media (max-width: 1400px)
+    .catalog
+        &__list
+            &-items 
+                grid-template: auto / repeat(3, 1fr)
+@media (max-width: 1200px)
+    .catalog
+        &__list
+            &-items 
+                grid-template: auto / 1fr 1fr
+@media (max-width: 992px)
+    .catalog
+        &__list 
+            &-sort
+                margin-bottom: 16px
+                .list 
+                    padding: 8px
+            &-nav 
+                margin-top: 16px
+@media (max-width: 650px)
+    .catalog
+        &__list
+            &-items 
+                grid-template: auto / 1fr
+@media (max-width: 576px)
+    .catalog
+        &__list 
+            &-sort
+                .list 
+                    min-width: 290px
+            &-nav
+                font-size: 12px
+                gap: 0
+                a 
+                    padding: 4px
+                    gap: 0
+                    min-width: 30px
+                    img 
+                        width: 14px
+                        min-width: 14px

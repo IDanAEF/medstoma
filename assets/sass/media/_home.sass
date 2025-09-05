@@ -1,0 +1,313 @@
+@media (max-width: 1700px)
+    .home
+        &__products
+            &-item 
+                margin-right: 8px
+                width: calc((100vw - 134px) / 4)
+        &__promo 
+            &-logo
+                max-width: 480px
+                h1 
+                    font-size: 80px
+            &-text 
+                max-width: 650px
+        &__adv
+            &-list 
+                &-item 
+                    &.plane 
+                        .plane__row 
+                            img
+                                width: 120px
+                                min-width: 120px
+                            &-text 
+                                strong 
+                                    margin-bottom: 8px
+        &__reviews
+            &-title 
+                & > span
+                    max-width: 650px
+            &-item 
+                width: calc((100vw - 135px) / 4)
+        &__how 
+            &-list 
+                gap: 8px
+@media (max-width: 1400px)
+    .home
+        &__promo 
+            &-logo 
+                max-width: 410px
+                h1
+                    font-size: 70px
+            &-text 
+                max-width: 550px
+        &__adv
+            &-list 
+                &-item 
+                    &.plane 
+                        .plane__row 
+                            img
+                                width: 100px
+                                min-width: 100px
+        &__products
+            &-item 
+                width: calc((100vw - 125px) / 3)
+                .preview
+                    width: 20vw
+                    height: 20vw
+        &__reviews
+            &-item 
+                width: calc((100vw - 125px) / 3)
+        &__accord
+            &-item 
+                .content
+                    &__grid 
+                        grid-template: auto / 1fr 1fr
+@media (max-width: 1200px)
+    .home
+        &__promo 
+            &-wrap 
+                .container 
+                    gap: 32px
+                    flex-direction: column
+                    align-items: center
+            &-logo 
+                max-width: 100%
+                width: 100%
+                text-align: center
+            &-text 
+                width: 100%
+                max-width: 100%
+                .btn
+                    margin-left: auto
+                    margin-right: auto
+        &__adv 
+            &-list 
+                grid-template: auto / 1fr 1fr
+                &-item 
+                    &.plane
+                        &2
+                            grid-row: 1 / 2
+                            grid-column: 2 / 3
+        &__products
+            &-item 
+                width: calc((100vw - 110px) / 2)
+                max-width: 548px
+                .preview
+                    width: 30vw
+                    height: 30vw
+                    max-width: 359px
+                    max-height: 359px
+        &__assort
+            &-list 
+                &-row 
+                    grid-template: auto / 1fr 1fr
+                &-item 
+                    &.item5
+                        grid-row: 2 / 4
+                        grid-column: 2 / 3
+        &__accord
+            &-item 
+                .content
+                    &__grid 
+                        grid-template: auto / 1fr
+        &__reviews
+            &-title 
+                gap: 32px
+                flex-direction: column
+                & > span 
+                    max-width: 100%
+                    width: 100%
+        &__consult
+            &-wrap 
+                .text 
+                    flex-direction: column
+                    align-items: flex-start
+                .btn 
+                    margin-left: 0
+@media (max-width: 992px)
+    .home
+        &__products, &__reviews
+            &-item 
+                width: calc((100vw - 60px) / 2)
+        &__how 
+            &-wrap 
+                display: flex
+            &-list 
+                grid-template: auto / 1fr
+            &-line 
+                margin-right: 24px
+                margin-bottom: 0
+                flex-direction: column
+                justify-content: space-between
+                &::before
+                    width: 1px
+                    height: 100%
+                    top: 0
+                    left: 50%
+                    transform: translateX(-50%)
+                &-item 
+                    height: 100%
+                    align-items: center
+        &__brands
+            &-list 
+                grid-template: auto / repeat(3, 1fr)
+@media (max-width: 768px)
+    .home
+        &__promo 
+            &-text 
+                ul 
+                    li 
+                        margin-bottom: 8px
+            &-wrap 
+                .container 
+                    gap: 24px
+        &__adv 
+            &-list 
+                grid-template: auto / 1fr
+                &-item 
+                    .image 
+                        width: 60px
+                        height: 60px
+                        margin-bottom: 12px
+                    &.plane
+                        &2
+                            grid-row: 2 / 3
+                            grid-column: 1 / 2
+                        .plane__row 
+                            gap: 12px
+                            img 
+                                width: 80px
+                                min-width: 80px
+        &__products, &__reviews
+            &-item 
+                width: 290px
+        &__products
+            &-item
+                .preview 
+                    width: 100%
+                    height: 256px
+                .bottom 
+                    .counter
+                        .num
+                            min-width: 45px
+                        .decrease, .increase
+                            width: 35px
+                            min-width: 35px
+                            &::before, &::after
+                                width: 15px
+        &__assort
+            &-list 
+                &-item 
+                    padding: 12px
+                    .simple-link
+                        margin-top: 12px
+                    ul 
+                        margin: 12px 0 auto
+        &__accord 
+            &-item 
+                margin-bottom: 12px
+                .content
+                    padding: 0px 16px
+                    &.active
+                        padding: 16px
+                .name 
+                    padding: 16px
+                    gap: 8px
+                    .plus 
+                        width: 24px
+                        height: 24px
+                        min-width: 24px
+                        &::before, &::after
+                            height: 2px
+        &__reviews
+            .slider
+                &-arrows 
+                    &-item 
+                        &.left 
+                            transform: translate(-50%, -50%)
+            &-title 
+                gap: 24px
+        &__consult
+            &-wrap 
+                gap: 12px
+                padding: 12px
+        &__contacts
+            &-info 
+                gap: 8px
+                &-item 
+                    padding: 16px
+                &-row 
+                    margin-bottom: 16px
+                    h3 
+                        margin-bottom: 8px
+                    span.ps 
+                        margin-top: 0
+            &-map 
+                margin-top: 24px
+@media (max-width: 576px) 
+    .text
+        &_fz
+            &90, &100
+                font-size: 40px
+    .home
+        &__promo 
+            &-logo 
+                h1 
+                    font-size: 50px
+            &-text 
+                .btn 
+                    width: 100%
+        &__adv 
+            &-list
+                &-item 
+                    padding: 12px
+        &__products 
+            .slider
+                &-arrows 
+                    &-item 
+                        &.left
+                            transform: translate(-30%, -50%)
+                        &.right
+                            transform: translate(30%, -50%)
+        &__assort
+            &-list 
+                &-row 
+                    grid-template: auto / 1fr !important
+                &-item 
+                    &.item5
+                        grid-column: 1 / 2
+                        grid-row: 5 / 6
+        &__accord
+            &-item 
+                .name 
+                    h2 
+                        font-size: 18px
+                .content
+                    &__grid 
+                        &-item 
+                            padding: 12px
+        &__how 
+            &-line 
+                margin-right: 8px
+            &-list 
+                &-item 
+                    padding: 16px
+                    .num 
+                        margin-bottom: 16px
+        &__consult
+            &-wrap
+                flex-direction: column
+                align-items: flex-start
+                .btn 
+                    width: 100%
+        &__brands
+            &-list 
+                grid-template: auto / 1fr 1fr
+        &__contacts
+            &-info 
+                grid-template: auto / 1fr
+                &-row 
+                    .btn 
+                        width: 100%
+            &-map 
+                height: 400px

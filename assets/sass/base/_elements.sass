@@ -1,0 +1,353 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    -webkit-text-size-adjust: none
+    &::-webkit-scrollbar
+        width: 8px
+        height: 5px
+    &::-webkit-scrollbar-track
+        background: $white
+    &::-webkit-scrollbar-thumb 
+        background-color: $color
+body
+    color: $black
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    font-family: 'Hauora', sans-serif
+    font-weight: 600
+    line-height: 1.5
+    font-size: 18px
+a 
+    color: inherit
+    text-decoration: none
+    transition: 0.3s all
+    &:not(.no-hover)
+        &:hover, &.active
+            color: $color
+strong 
+    font-weight: 700
+html, body 
+    &.fixed
+        overflow: hidden
+.page-wrap
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    flex: 1
+footer
+    margin-top: auto
+main 
+    position: relative
+    flex: 1
+img, svg 
+    max-width: 100%
+    max-height: 100%
+    width: auto
+    height: auto
+    object-fit: contain
+picture
+    display: flex
+.container
+    position: relative
+    margin: 0 auto
+    width: 100%
+    max-width: 1920px
+    padding-right: 100px
+    padding-left: 100px
+.img
+    &_bg
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 0
+        pointer-events: none
+h1, h2, h3, h4, h5, h6
+    font-weight: 600
+    line-height: 1.2
+    color: $black
+h1
+    word-break: break-word
+    margin: 0
+    font-size: 48px
+h2
+    font-size: 48px
+h3, h4
+    font-size: 24px
+h5 
+    font-size: 18px
+h6
+    font-size: 16px
+.default-text
+    h2, h3, h4, h5, h6, p, table, ul, ol
+        &:last-child
+            margin-bottom: 0 !important
+        &:first-child
+            margin-top: 0 !important
+    h2
+        margin-top: 48px
+        margin-bottom: 24px
+    h3, h4, h5, h6
+        margin-top: 24px
+        margin-bottom: 24px
+    p, img 
+        margin: 24px 0px
+    img 
+        margin-left: auto
+        margin-right: auto
+    table
+        border-collapse: collapse
+        width: 100%
+        max-width: 100%
+        margin: 24px 0px
+        td 
+            border: 1px solid $black
+            padding: 10px
+    ol, ul 
+        margin: 24px 0px
+        padding-left: 1em
+    a 
+        text-decoration: underline
+.default-text.ul-white
+    ul 
+        li 
+            &::before
+                background: $white
+.text_white
+    table
+        td 
+            border: 1px solid $white
+.text 
+    &_normal
+        font-style: normal
+    &_italic
+        font-style: italic
+    &_center
+        text-align: center
+    &_right 
+        text-align: right
+    &_black
+        color: $black
+    &_white
+        color: $white
+    &_color 
+        color: $color
+        &-light
+            color: $colorLight
+        &-dark 
+            color: $colorDark
+    &_red
+        color: $red
+    &_underline
+        text-decoration: underline
+    &_upper 
+        text-transform: uppercase
+    &_nowrap
+        white-space: nowrap
+    &_lbreak
+        word-break: break-word
+    &_lt
+        text-decoration: line-through
+    &_fw 
+        &100
+            font-weight: 100
+        &200
+            font-weight: 200
+        &300
+            font-weight: 300
+        &400
+            font-weight: 400
+        &500
+            font-weight: 500
+        &600
+            font-weight: 600
+        &700
+            font-weight: 700
+        &800
+            font-weight: 800
+        &900
+            font-weight: 900
+    &_fz 
+        &12
+            font-size: 12px
+        &14
+            font-size: 14px
+        &16
+            font-size: 16px
+        &18
+            font-size: 18px
+        &24
+            font-size: 24px
+        &40
+            font-size: 40px
+            line-height: 1.2
+        &48
+            font-size: 48px
+            line-height: 1.2
+        &90
+            font-size: 90px
+            line-height: 1.1
+        &100
+            font-size: 100px
+            line-height: 1.1
+.elem
+    &_animate 
+        transition: 1.4s all
+        &:not(.opacity)
+            transform: rotateX(90deg)
+        &.opacity
+            opacity: 0
+            &.anim 
+                opacity: 1
+        &:not(.opacity)
+            &.anim
+                transform: rotateX(00deg)
+        &.left, &.right, &.top, &.bott
+            transition: 1.4s all
+            opacity: 0
+            &.anim 
+                opacity: 1
+        &.top
+            transform: translate3d(0, 60px, 0)
+            &.anim
+                transform: translate3d(0, 0, 0)
+        &.bott
+            transform: translate3d(0, -60px, 0)
+            &.anim
+                transform: translate3d(0, 0, 0)
+        &.right
+            transform: translate3d(-60px, 0, 0)
+            &.anim
+                transform: translate3d(0, 0, 0)
+        &.left
+            transform: translate3d(60px, 0, 0)
+            &.anim
+                transform: translate3d(0, 0, 0)
+        &.custom 
+            transform: none
+            &.anim 
+                transform: none
+.fancybox__content
+    padding: 0 !important
+    .framed-video
+        width: 900px
+        height: auto
+        max-width: 94vw
+        aspect-ratio: 1.77778 / 1
+.slider
+    &-list
+        user-select: none
+        touch-action: pan-y
+        -webkit-tap-highlight-color: transparent
+        cursor: grab
+        max-width: 100%
+        overflow: hidden
+        &.grabbing
+            cursor: grabbing
+    &-track 
+        transition: transform 0.5s ease 0s
+        display: flex
+        width: fit-content
+        &.fast 
+            transition: none
+            pointer-events: none
+    &-arrows
+        display: flex
+        align-items: center
+        gap: 8px 
+        &-item
+            width: 60px
+            min-width: 60px
+            height: 60px
+            background: $white
+            border-radius: 100%
+            border: 1px solid $slate300
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            transition: 0.4s all
+            img 
+                width: 24px
+            &.left 
+                img 
+                    transform: rotate(180deg)
+            &:hover, &.active
+                border: 1px solid $color
+.simple-link
+    display: flex
+    align-items: center
+    gap: 8px
+    color: $color
+    font-weight: 700
+    width: fit-content
+    span 
+        position: relative
+        transition: 0.4s all
+        border-bottom: 1.5px solid transparent
+    img 
+        width: 24px
+        min-width: 24px
+    &:hover, &.active
+        span
+            border-bottom: 1.5px solid $color
+.btn 
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    gap: 8px
+    background: $colorLight
+    border: none
+    outline: none
+    cursor: pointer
+    padding: 16px 20px
+    border-radius: 12px
+    font-weight: 700
+    color: $white !important
+    transition: 0.4s all
+    width: fit-content
+    span 
+        position: relative
+    img
+        width: 24px
+        min-width: 24px
+        filter: brightness(0) invert(1)
+    &:hover, &.active
+        background: $color
+    &.light
+        background: $sky100
+        color: $color !important
+        img
+            filter: none
+        &:hover, &.active
+            background: $sky200
+    &.white
+        background: $white
+        color: $color !important
+        border: 1.5px solid $slate300
+        img
+            filter: none
+        &:hover, &.active
+            border: 1.5px solid $color
+    &.red 
+        background: $red
+        &:hover, &.active
+            background: #c10007
+    &.small 
+        padding: 8px 12px
+    &.disable 
+        border: none !important
+        color: $black !important
+        background: rgba(0, 0, 0, 0.1) !important
+        opacity: 0.3
+        pointer-events: none
+        user-select: none
+        img
+            filter: brightness(0) !important
