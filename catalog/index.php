@@ -20,7 +20,7 @@
         </div>
     </section>
     <?php require '../includes/home-assort.php' ?>
-    <section class="page__block pb100">
+    <section class="page__block">
         <div class="container">
             <div class="home__reviews-title page__title">
                 <h2>Гигиенические средства <br>и защита кожи</h2>

@@ -122,7 +122,7 @@
             <div class="price text_fz24">
                 <span class="<?=!$order ? 'text_red' : 'text_color'?>"><?=number_format($price, 0, '', ' ')?> ₽</span>
                 <?php if ($oldPrice) : ?>
-                    <span class="text_fz18"><?=number_format($oldPrice, 0, '', ' ')?> ₽</span>
+                    <span class="text_fz18 text_lt"><?=number_format($oldPrice, 0, '', ' ')?> ₽</span>
                     <span class="text_fz16 text_color">-<?=ceil(($oldPrice - $price) / ($oldPrice / 100))?>%</span>
                 <?php endif; ?>
             </div>

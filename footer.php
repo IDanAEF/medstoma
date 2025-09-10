@@ -64,6 +64,60 @@
             </div>
         </footer>
     </div>
+
+    <div class="modal">
+        <div class="modal__item" data-modal="callback">
+            <div class="modal__close"></div>
+            <div class="modal__wrap">
+                <form action="" class="form">
+                    <div class="form-head text_fz24">Заказать звонок</div>
+                    <div class="form-body">
+                        <div class="form-block">
+                            <div class="form-row">
+                                <label class="form-label">
+                                    <span>Ваше имя</span>
+                                    <input type="text" name="" placeholder="Введите имя" required class="text_fz18">
+                                </label>
+                                <label class="form-label">
+                                    <span>Номер вашего телефона</span>
+                                    <input type="tel" name="" placeholder="+7 (___) ___-__-__" required class="text_fz18">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-block checkboxes text_color-dark text_fz14">
+                            <label class="checkboxes-item">
+                                <input type="checkbox" name="" required>
+                                <div class="box"></div>
+                                <span>Я согласен на получение рекламной информации в соответствии c <a href="/privacy/" class="text_color-light">Согласием на рекламу</a></span>
+                            </label>
+                            <label class="checkboxes-item">
+                                <input type="checkbox" name="" required>
+                                <div class="box"></div>
+                                <span>Я согласен на обработку персональных данных в соответствии с <a href="/privacy/" class="text_color-light">Политикой конфиденциальности</a> и <a href="/privacy/" class="text_color-light">Согласием на обработку</a></span>
+                            </label>
+                        </div>
+                        <div class="form-block">
+                            <div class="form-label">
+                                <?=getBtn(['text' => 'Отправить'])?>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal__item modal__success">
+            <div class="modal__close"></div>
+            <div class="modal__wrap">
+                <div class="form text_center">
+                    <div class="form-head text_fz24">Спасибо за заявку!</div>
+                    <div class="form-body">
+                        Мы свяжемся с вами в ближайшее время
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="/assets/js/fancybox.umd.js"></script>
     <script src="/assets/js/script.js"></script>
     <script src="/custom.js"></script>

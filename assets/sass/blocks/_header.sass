@@ -2,6 +2,39 @@
     position: relative
     z-index: 10
     padding-bottom: 50px
+    &__mobile 
+        display: none
+        position: fixed
+        left: 0
+        top: 83px
+        width: 100%
+        height: calc(100% - 83px)
+        z-index: 12
+        background: $white
+        padding: 20px 16px
+        overflow: auto
+        transition: 0.4s all
+        opacity: 0
+        visibility: hidden
+        &.active 
+            opacity: 1
+            visibility: visible
+        .header
+            &__bottom 
+                &-info, &-btns 
+                    display: flex !important
+                &-btns 
+                    margin-top: 20px
+                &-info 
+                    flex-direction: column
+                    gap: 12px
+            &__top 
+                &-nav 
+                    margin-top: 20px
+                    ul 
+                        flex-direction: column
+                        align-items: flex-start
+                        gap: 12px
     &__burger
         display: none
         align-items: center
@@ -12,11 +45,23 @@
         border-radius: 100%
         border: 1px solid $slate300
         transition: 0.4s border
+        cursor: pointer
+        & > * 
+            pointer-events: none
         img 
+            position: absolute
             width: 24px
             min-width: 24px
+            &.close
+                display: none
         &:hover, &.active 
             border: 1px solid $color
+        &.active
+            img 
+                &.close
+                    display: block
+                &.open
+                    display: none
     &__logo 
         width: 295px
         min-width: 295px
@@ -97,6 +142,71 @@
         align-items: center
         gap: 16px
         margin-top: 24px
+        position: relative
+        &-cats 
+            position: absolute
+            left: 0
+            top: calc(100% + 16px)
+            background: $white
+            border: 1px solid $slate300
+            border-radius: 24px
+            padding: 12px
+            width: 100%
+            max-height: 540px
+            z-index: 5
+            display: flex
+            align-items: flex-start
+            gap: 64px
+            overflow: auto
+            transition: 0.4s all
+            opacity: 0
+            visibility: hidden
+            &.active
+                opacity: 1
+                visibility: visible
+            &-close 
+                display: none
+            &-list 
+                width: 315px
+            &-subs 
+                padding-top: 16px
+                flex-wrap: wrap
+                display: none
+                & > a 
+                    display: block
+                    width: fit-content
+                    margin-bottom: 24px
+                    &:last-child
+                        margin-bottom: 0 !important
+                &.active 
+                    display: block
+            &-item 
+                display: flex
+                align-items: center
+                gap: 8px
+                border-radius: 12px
+                padding: 16px
+                transition: 0.4s all
+                margin-bottom: 16px
+                justify-content: space-between
+                cursor: pointer
+                & > * 
+                    pointer-events: none
+                &:last-child
+                    margin-bottom: 0 !important
+                &::after
+                    content: ''
+                    width: 24px
+                    height: 24px
+                    min-width: 24px
+                    background: url('../images/icons/small-arrow.svg') center center/contain no-repeat
+                    transition: 0.4s opacity
+                    opacity: 0
+                &:hover, &.active
+                    background: $slate100
+                    color: $colorDark
+                    &::after
+                        opacity: 1
         &-menu 
             display: flex
             align-items: center 

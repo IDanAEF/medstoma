@@ -1,0 +1,121 @@
+.states
+    &__list 
+        &-wrap 
+            display: grid
+            grid-template: auto / repeat(2, 1fr)
+            gap: 48px
+        &-item 
+            display: flex
+            gap: 24px
+            align-items: flex-start
+            .text
+                flex: 1
+                height: 100%
+                display: flex
+                flex-direction: column
+                .default-text
+                    margin-bottom: auto
+                .btn
+                    margin-top: 24px
+            .image 
+                display: flex
+                position: relative
+                width: 20vw
+                aspect-ratio: 1.5
+                border-radius: 12px
+                overflow: hidden
+    &__block 
+        &-wrap 
+            display: grid
+            grid-template: auto / 1fr 1fr
+            gap: 24px
+            img 
+                border-radius: 12px
+                object-fit: cover
+                aspect-ratio: 1.696
+                width: 100%
+    &__gallery 
+        &-wrap 
+            display: grid
+            grid-template: auto / repeat(3, 1fr)
+            gap: 24px
+            a 
+                display: flex
+                border-radius: 12px
+                width: 100%
+                overflow: hidden
+                position: relative
+                aspect-ratio: 1
+    &__content
+        &-wrap 
+            display: flex
+            align-items: flex-start
+            gap: 8.85vw
+        &-text 
+            flex: 1
+        &-more 
+            width: 29.01vw
+            max-width: 557px
+            &-item 
+                margin-top: 24px
+                .date
+                    color: #5f5f5f
+                    display: block
+                    margin-bottom: 16px
+                .image 
+                    position: relative
+                    border-radius: 12px
+                    margin-bottom: 16px
+                    display: flex
+                    width: 100%
+                    aspect-ratio: 1.313
+                    overflow: hidden
+                h5 
+                    margin-bottom: 8px
+        &-promo 
+            position: relative
+            min-height: 500px
+            overflow: hidden
+            border-radius: 12px
+            display: flex
+            align-items: flex-end
+            padding: 48px
+            &::before
+                content: ''
+                z-index: 1
+                width: 100%
+                height: 100%
+                position: absolute
+                pointer-events: none
+                left: 0
+                bottom: 0
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%)
+            &-text 
+                position: relative
+                z-index: 2
+                max-width: 850px
+                & > h2 
+                    margin-bottom: 8px
+                .default-text
+                    &, *
+                        color: #f5f5f5
+    &__cities
+        &-image
+            position: relative
+            overflow: hidden
+            border-radius: 12px
+            height: 500px
+        &-list 
+            max-height: 1700px
+            display: flex
+            flex-direction: column
+            align-content: space-between
+            flex-wrap: wrap
+            gap: 48px 20px
+            &-item 
+                width: fit-content
+                span, a 
+                    display: block
+                    width: fit-content
+                span 
+                    margin-bottom: 16px

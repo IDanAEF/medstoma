@@ -24,6 +24,39 @@ const forms = () => {
     }
 
     try {
+        const checkFields = document.querySelectorAll('.checkboxes');
+
+        checkFields.forEach(field => {
+            const fieldItems = document.querySelectorAll('.checkboxes-item'),
+                  fieldRadio = field.classList.contains('radio');
+
+            fieldItems.forEach(checkItem => {
+                let checkInput = checkItem.querySelector('input');
+
+                if (checkInput.checked || checkItem.classList.contains('active')) {
+                    checkItem.classList.add('active');
+                    checkInput.checked = true;
+                }
+
+                checkInput.addEventListener('change', () => {
+                    if (fieldRadio) {
+                        fieldItems.forEach(item => {
+                            if (item != checkItem) {
+                                item.classList.remove('active');
+                                item.querySelector('input').checked = false;
+                            }
+                        });
+                    }
+
+                    checkItem.classList.toggle('active');
+                });
+            });
+        });
+    } catch (e) {
+        console.log(e.stack);
+    }
+
+    try {
         const selectFields = document.querySelectorAll('.select-field');
 
         selectFields.forEach(field => {

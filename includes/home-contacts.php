@@ -1,4 +1,4 @@
-<section class="home__contacts page__block pb100">
+<section class="home__contacts page__block">
     <div class="container">
         <h2 class="page__title">
             Контакты

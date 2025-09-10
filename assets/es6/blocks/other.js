@@ -46,96 +46,6 @@ const other = () => {
     }
 
     try {
-        const targetElem = document.querySelectorAll('.elem_animate'),
-              targetText = document.querySelectorAll('.text_animate'),
-              targetFields = document.querySelectorAll('.elem_animate_field');
-
-            
-        if (window.innerWidth > 992) {
-            targetFields.forEach(field => {
-                const fieldElems = field.querySelectorAll('.elem_animate'),
-                      first = field.querySelector('.first-animate');
-
-                let delay = 0,
-                    diff = 0.7;
-
-                if (first) {
-                    first.style.transitionDelay = delay+'s';
-                    delay += diff;
-                }
-
-                fieldElems.forEach(item => {
-                    if (!first || item != first) {
-                        item.style.transitionDelay = delay+'s';
-                        delay += diff; 
-                    }
-                });
-            });
-        }
-        
-        targetText.forEach(item => {
-            let textCont = item.textContent.trim(),
-                newInner = '',
-                transit = 0;
-
-            for (let i = 0; i < textCont.length; i++) {
-                newInner += `<i class="or" style="transition: 0.4s all ${transit.toFixed(2)}s">${textCont[i]}</i>`;
-                transit += 0.03;
-            }
-            item.innerHTML = newInner;
-        });
-
-        function returnHeight() {
-            return window.innerWidth <= 600 ? window.innerHeight / 1.05 : window.innerHeight / 1.2
-        }
-
-        function removeAnim() {
-            targetElem.forEach(item => item.classList.remove('anim'));
-        }
-
-        function setAnim(mass) {
-            mass.forEach(item => {
-                if (returnHeight() + window.scrollY >= item.getBoundingClientRect().y + window.scrollY) {
-                    item.classList.add('anim');
-                }
-            });
-        }
-
-        function setChildAnim(mass) {
-            if (window.innerWidth > 992) {
-               mass.forEach(item => {
-                    if (returnHeight() + window.scrollY >= item.getBoundingClientRect().y + window.scrollY) {
-                        item.querySelectorAll('.elem_animate').forEach(itemChild => {
-                            itemChild.classList.add('anim');
-                        });
-                    }
-                }); 
-            }
-        }
-
-        setChildAnim(targetFields);
-        setAnim(targetElem);
-        setAnim(targetText);
-
-        window.addEventListener('scroll', () => {
-            setChildAnim(targetFields);
-            setAnim(targetElem);
-            setAnim(targetText);
-        });
-
-        window.onbeforeunload = () => {
-            removeAnim();
-        }
-        window.onpageshow = function() {
-            setChildAnim(targetFields);
-            setAnim(targetElem);
-            setAnim(targetText);
-        };
-    } catch (e) {
-        console.log(e.stack);
-    }
-
-    try {
         const modal = document.querySelector('.modal'),
               modalBtns = document.querySelectorAll('[data-call-modal]'),
               modalItems = document.querySelectorAll('.modal__item');
@@ -213,6 +123,77 @@ const other = () => {
                     }
                 ]);
             });
+        });
+    } catch (e) {
+        console.log(e.stack);
+    }
+
+    try {
+        const catalogTabs = document.querySelectorAll('.catalog__product-tabs-names span'),
+              catalogTabsContent = document.querySelectorAll('.catalog__product-tabs-content');
+
+        const setTab = (i = 0) => {
+            catalogTabs.forEach(item => item.classList.remove('active'));
+            catalogTabsContent.forEach(item => item.classList.remove('active'));
+
+            catalogTabs[i].classList.add('active');
+            catalogTabsContent[i].classList.add('active');
+        }
+
+        setTab();
+
+        catalogTabs.forEach((tab, i) => {
+            tab.addEventListener('click', () => setTab(i)); 
+        });
+    } catch (e) {
+        console.log(e.stack);
+    }
+    
+    try {
+        const headerBarCats = document.querySelector('.header__bar-cats'),
+              headerBarBtn = document.querySelector('.header-bar-btn'),
+              catsClose = headerBarCats.querySelector('.header__bar-cats-close'),
+              catsList = headerBarCats.querySelector('.header__bar-cats-list'),
+              catsLinks = headerBarCats.querySelector('.header__bar-cats-links'),
+              catsListItems = catsList.querySelectorAll('.header__bar-cats-item'),
+              catsLinksItems = catsLinks.querySelectorAll('.header__bar-cats-subs');
+
+        const setActive = (i = 0) => {
+            if (window.innerWidth <= 576) hideScroll();
+
+            catsList.classList.add('active');
+            catsLinks.classList.add('active');
+
+            catsListItems.forEach(item => item.classList.remove('active'));
+            catsLinksItems.forEach(item => item.classList.remove('active'));
+
+            catsListItems[i].classList.add('active');
+            catsLinksItems[i].classList.add('active');
+        }
+
+        const closeActive = () => {
+            catsList.classList.remove('active');
+            catsLinks.classList.remove('active');
+
+            catsListItems.forEach(item => item.classList.remove('active'));
+            catsLinksItems.forEach(item => item.classList.remove('active'));
+        }
+
+        if (window.innerWidth > 576) setActive();
+
+        catsListItems.forEach((listItem, i) => {
+            listItem.addEventListener('click', () => setActive(i));
+            listItem.addEventListener('mouseenter', () => setActive(i));
+        });
+
+        catsClose.addEventListener('click', () => {
+            if (catsLinks.classList.contains('active')) closeActive();
+            else {
+                headerBarBtn.classList.remove('active');
+                headerBarCats.classList.remove('active');
+            }
+
+            showScroll();
         });
     } catch (e) {
         console.log(e.stack);

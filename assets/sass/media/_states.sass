@@ -1,0 +1,102 @@
+@media (min-width: 1920px)
+    .states
+        &__content
+            &-wrap 
+                gap: 170px
+@media (max-width: 1700px)
+    .states
+        &__content
+            &-wrap 
+                gap: 100px
+@media (max-width: 1400px)
+    .states
+        &__content
+            &-promo
+                &-text
+                    max-width: 650px
+        &__cities
+            &-list
+                max-height: 1550px
+        &__list 
+            &-wrap
+                gap: 24px
+            &-item 
+                flex-direction: column
+                .image
+                    width: 100%
+                .text
+                    height: auto
+@media (max-width: 1200px)
+    .states
+        &__content
+            &-promo
+                padding: 24px
+            &-wrap
+                flex-direction: column
+            &-more 
+                width: 100%
+                &-wrap 
+                    margin-top: 24px
+                    display: grid
+                    grid-template: auto / 1fr 1fr
+                    gap: 24px
+                &-item 
+                    margin: 0
+                    .image 
+                        aspect-ratio: 1.028
+        &__block 
+            &-wrap
+                grid-template: auto / 1fr
+@media (max-width: 992px)
+    .states
+        &__list 
+            &-wrap, &-item 
+                gap: 16px
+            &-item 
+                .text 
+                    .btn 
+                        margin-top: 16px
+        &__content
+            &-wrap 
+                gap: 70px
+            &-more
+                &-wrap
+                    gap: 12px
+        &__gallery
+            &-wrap 
+                gap: 12px
+@media (max-width: 768px)
+    .states
+        &__content
+            &-promo 
+                min-height: 360px
+            &-more 
+                &-item 
+                    .date, .image 
+                        margin-bottom: 8px
+        &__cities
+            &-image 
+                height: 360px
+@media (max-width: 576px)
+    .states
+        &__list 
+            &-wrap
+                grid-template: auto / 1fr
+            &-item 
+                .text 
+                    .btn 
+                        width: 100%
+        &__gallery
+            &-wrap 
+                grid-template: auto / 1fr 1fr
+        &__content
+            &-promo
+                padding: 12px
+            &-wrap 
+                gap: 48px
+            &-more 
+                &-wrap 
+                    grid-template: auto / 1fr
+        &__cities
+            &-list
+                max-height: 2500px

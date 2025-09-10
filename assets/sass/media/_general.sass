@@ -144,6 +144,8 @@
                 padding-bottom: 70px
         &__title 
             margin-bottom: 24px
+        &__nav 
+            margin-top: 16px
     .header
         padding-bottom: 35px
         &__logo 
@@ -153,14 +155,42 @@
             &-nav 
                 ul 
                     flex-wrap: wrap
+        &__bar 
+            &-cats 
+                gap: 32px
+                &-list
+                    width: 270px
+    .footer
+        padding-top: 35px
 @media (max-width: 768px)
     .page-wrap
         padding-top: 83px
+    .modal
+        &__close 
+            width: 20px
+            height: 20px
+            top: 20px
+            right: 20px
+    .form
+        &-body 
+            padding: 24px
+        &-head 
+            padding: 24px
+            padding-right: 48px
+        &-row 
+            grid-template: auto / 1fr
+            gap: 16px
+        &-label, &-row 
+            margin-bottom: 16px
+        &-block 
+            margin-bottom: 20px
     .header
         &__top 
             display: none
         &__burger
             display: flex
+        &__mobile
+            display: block
         &__bottom
             margin: 0
             padding: 8px 25px
@@ -183,6 +213,10 @@
         &__bar 
             gap: 16px 8px
             margin-top: 16px
+            &-cats
+                left: -25px
+                width: 100vw
+                padding: 16px
         &__cats 
             grid-template: auto / repeat(3, 1fr)
             margin-top: 16px
@@ -208,11 +242,6 @@
     .container
         padding-left: 15px
         padding-right: 15px
-    .modal
-        &__close 
-            width: 23px
-            height: 23px
-            right: 0
     .page-wrap
         padding-top: 70px
     .page
@@ -223,7 +252,36 @@
                 padding-top: 48px
             &.pb100
                 padding-bottom: 48px
+        &__nav
+            font-size: 12px
+            gap: 0
+            a 
+                padding: 4px
+                gap: 0
+                min-width: 30px
+                img 
+                    width: 14px
+                    min-width: 14px
+    .form 
+        &-head 
+            padding: 20px 16px
+            padding-right: 32px
+        &-body 
+            padding: 20px 16px
+    .modal
+        &__close 
+            right: 16px
     .header
+        &__mobile 
+            top: 69px
+            height: calc(100% - 69px)
+            .header
+                &__bottom 
+                    &-btns 
+                        .btn
+                            width: 100%
+                            span 
+                                display: none
         &__cats 
             grid-template: auto / 1fr 1fr
             &-item 
@@ -252,7 +310,52 @@
                 order: 3
                 width: 100%
                 flex: unset
+            &-cats 
+                position: fixed
+                z-index: 11
+                left: 0
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                max-height: unset
+                border-radius: 0
+                overflow-y: auto
+                overflow-x: hidden
+                padding: 0
+                gap: 0
+                &-item 
+                    border-radius: 0
+                    margin-bottom: 12px
+                &-list, &-links 
+                    width: 100%
+                    min-width: 100vw
+                    padding-top: 75px
+                    transition: 0.4s transform
+                    &.active 
+                        transform: translateX(-100%)
+                &-subs 
+                    width: 100%
+                    padding: 16px
+                &-close 
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    cursor: pointer
+                    z-index: 1
+                    padding: 24px 16px
+                    gap: 8px 
+                    & > *
+                        pointer-events: none
+                    img 
+                        width: 24px
+                        min-width: 24px
+                        transform: rotate(180deg)
     .footer
+        padding-top: 24px
         &__nav 
             & > ul 
                 flex-direction: column

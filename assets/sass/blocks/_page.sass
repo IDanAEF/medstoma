@@ -14,3 +14,36 @@
         margin-bottom: 48px
         &:last-child
             margin-bottom: 0 !important
+    &__nav
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 32px
+        gap: 8px
+        .pages
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+        .prev
+            img 
+                transform: rotate(180deg)
+        a 
+            padding: 8px 12px
+            border-radius: 8px
+            gap: 8px
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            transition: 0.4s border
+            border: 1px solid transparent
+            color: $black !important
+            min-width: 40px
+            img 
+                width: 16px
+                min-width: 16px
+            &:hover 
+                border: 1px solid $slate300
+            &.active
+                border: 1px solid $color

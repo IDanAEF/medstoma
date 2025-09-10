@@ -5,7 +5,7 @@
             <div class="page__breadcrumbs-wrap text_fz16">
                 <a href="/" class="text_color-dark">Главная</a>
                 <span class="text_fz14"> / </span>
-                <a href="/catalog/">Каталог</a>
+                <a href="/catalog/" class="text_color-dark">Каталог</a>
                 <span class="text_fz14"> / </span>
                 <span>Калоприемники</span>
             </div>
@@ -92,26 +92,10 @@
                     }
                 ?>
             </div>
-            <div class="catalog__list-nav text_fz16">
-                <a href="" class="prev">
-                    <img src="<?=IMAGES?>icons/small-arrow.svg" alt="Назад">
-                    Назад
-                </a>
-                <div class="pages">
-                    <a href="">1</a>
-                    <a href="" class="active">2</a>
-                    <a href="">3</a>
-                    <a href="">···</a>
-                    <a href="">100</a>
-                </div>
-                <a href="" class="next">
-                    Вперед
-                    <img src="<?=IMAGES?>icons/small-arrow.svg" alt="Вперед">
-                </a>
-            </div>
+            <?php require '../../includes/page-nav.php'; ?>
         </div>
     </section>
-    <section class="page__block pb100">
+    <section class="page__block">
         <div class="container">
             <div class="home__reviews-title page__title">
                 <h2>Надежность и комфорт каждый день</h2>
