@@ -29,14 +29,14 @@
     <section class="states__gallery">
         <div class="container">
             <div class="states__gallery-wrap">
-                <a href="<?=IMAGES?>states-image3.jpg" data-fancybox="state-gallery">
-                    <img src="<?=IMAGES?>states-image3.jpg" alt="state-gallery" class="img_bg">
+                <a href="https://medstoma.ru/img/cont1.jpg" data-fancybox="state-gallery">
+                    <img src="https://medstoma.ru/img/cont1.jpg" alt="state-gallery" class="img_bg">
                 </a>
-                <a href="<?=IMAGES?>states-image4.jpg" data-fancybox="state-gallery">
-                    <img src="<?=IMAGES?>states-image4.jpg" alt="state-gallery" class="img_bg">
+                <a href="https://medstoma.ru/img/cont2.jpg" data-fancybox="state-gallery">
+                    <img src="https://medstoma.ru/img/cont2.jpg" alt="state-gallery" class="img_bg">
                 </a>
-                <a href="<?=IMAGES?>states-image5.jpg" data-fancybox="state-gallery">
-                    <img src="<?=IMAGES?>states-image5.jpg" alt="state-gallery" class="img_bg">
+                <a href="https://medstoma.ru/img/cont3.jpg" data-fancybox="state-gallery">
+                    <img src="https://medstoma.ru/img/cont3.jpg" alt="state-gallery" class="img_bg">
                 </a>
             </div>
         </div>

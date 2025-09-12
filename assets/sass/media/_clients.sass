@@ -1,0 +1,26 @@
+@media (max-width: 1200px)
+    .clients
+        &__video
+            &-list 
+                grid-template: auto / 1fr 1fr
+@media (max-width: 992px)
+    .clients
+        &__docs
+            &-list 
+                grid-template: auto / repeat(4, 1fr)
+@media (max-width: 768px)
+    .clients
+        &__docs
+            &-list 
+                grid-template: auto / repeat(3, 1fr)
+        &__video
+            &-list 
+                gap: 8px
+@media (max-width: 576px)
+    .clients
+        &__docs
+            &-list 
+                grid-template: auto / 1fr 1fr
+        &__video
+            &-list 
+                grid-template: auto / 1fr

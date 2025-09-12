@@ -25,7 +25,7 @@ const forms = () => {
 
     try {
         const checkFields = document.querySelectorAll('.checkboxes');
-
+        
         checkFields.forEach(field => {
             const fieldItems = document.querySelectorAll('.checkboxes-item'),
                   fieldRadio = field.classList.contains('radio');
@@ -48,7 +48,8 @@ const forms = () => {
                         });
                     }
 
-                    checkItem.classList.toggle('active');
+                    if (checkInput.checked) checkItem.classList.add('active');
+                    else checkItem.classList.remove('active');
                 });
             });
         });

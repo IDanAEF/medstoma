@@ -8,7 +8,8 @@
                 </span>
                 <?=getBtn([
                     'text' => 'Получить консультацию',
-                    'image' => IMAGES.'icons/mail.svg'
+                    'image' => IMAGES.'icons/mail.svg',
+                    'attr' => 'data-call-modal="callback"'
                 ])?>
             </div>
         </div>

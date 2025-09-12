@@ -55,7 +55,7 @@
                         <li><a href="/contacts/">Контакты</a></li>
                         <li><a href="/payment/">Оплата</a></li>
                         <li><a href="/certificate/">Принимаем электронные сертификаты ФСС</a></li>
-                        <li><a href="/useful/">Полезная информация</a></li>
+                        <li><a href="/clients/">Полезная информация</a></li>
                     </ul>
                 </nav>
                 <div class="footer__bott text_fz16 text_color-dark">
@@ -66,6 +66,57 @@
     </div>
 
     <div class="modal">
+        <div class="modal__item" data-modal="order">
+            <div class="modal__close"></div>
+            <div class="modal__wrap">
+                <form action="" class="form">
+                    <div class="form-head text_fz24">Оставьте заявку или задайте вопрос</div>
+                    <div class="form-body">
+                        <div class="form-block">
+                            <div class="form-row">
+                                <label class="form-label">
+                                    <span>Название товара</span>
+                                    <input type="text" name="" placeholder="Введите товар" required class="text_fz18">
+                                </label>
+                                <label class="form-label">
+                                    <span>Номер телефона*</span>
+                                    <input type="tel" name="" placeholder="Введите номер" required class="text_fz18">
+                                </label>
+                                <label class="form-label">
+                                    <span>Ваше имя</span>
+                                    <input type="text" name="" placeholder="Введите имя" required class="text_fz18">
+                                </label>
+                                <label class="form-label">
+                                    <span>Ваш E-mail</span>
+                                    <input type="email" name="" placeholder="Введите E-mail" required class="text_fz18">
+                                </label>
+                            </div>
+                            <label class="form-label">
+                                <span>Введите ваш вопрос или комментарий</span>
+                                <textarea name=""></textarea>
+                            </label>
+                        </div>
+                        <div class="form-block checkboxes text_color-dark text_fz14">
+                            <label class="checkboxes-item">
+                                <input type="checkbox" name="" required>
+                                <div class="box"></div>
+                                <span>Я согласен на получение рекламной информации в соответствии c <a href="/privacy/" class="text_color-light">Согласием на рекламу</a></span>
+                            </label>
+                            <label class="checkboxes-item">
+                                <input type="checkbox" name="" required>
+                                <div class="box"></div>
+                                <span>Я согласен на обработку персональных данных в соответствии с <a href="/privacy/" class="text_color-light">Политикой конфиденциальности</a> и <a href="/privacy/" class="text_color-light">Согласием на обработку</a></span>
+                            </label>
+                        </div>
+                        <div class="form-block">
+                            <div class="form-label">
+                                <?=getBtn(['text' => 'Отправить'])?>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="modal__item" data-modal="callback">
             <div class="modal__close"></div>
             <div class="modal__wrap">
@@ -83,6 +134,49 @@
                                     <input type="tel" name="" placeholder="+7 (___) ___-__-__" required class="text_fz18">
                                 </label>
                             </div>
+                        </div>
+                        <div class="form-block checkboxes text_color-dark text_fz14">
+                            <label class="checkboxes-item">
+                                <input type="checkbox" name="" required>
+                                <div class="box"></div>
+                                <span>Я согласен на получение рекламной информации в соответствии c <a href="/privacy/" class="text_color-light">Согласием на рекламу</a></span>
+                            </label>
+                            <label class="checkboxes-item">
+                                <input type="checkbox" name="" required>
+                                <div class="box"></div>
+                                <span>Я согласен на обработку персональных данных в соответствии с <a href="/privacy/" class="text_color-light">Политикой конфиденциальности</a> и <a href="/privacy/" class="text_color-light">Согласием на обработку</a></span>
+                            </label>
+                        </div>
+                        <div class="form-block">
+                            <div class="form-label">
+                                <?=getBtn(['text' => 'Отправить'])?>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal__item" data-modal="mailus">
+            <div class="modal__close"></div>
+            <div class="modal__wrap">
+                <form action="" class="form">
+                    <div class="form-head text_fz24">Написать нам письмо</div>
+                    <div class="form-body">
+                        <div class="form-block">
+                            <div class="form-row">
+                                <label class="form-label">
+                                    <span>Ваше имя</span>
+                                    <input type="text" name="" placeholder="Введите имя" required class="text_fz18">
+                                </label>
+                                <label class="form-label">
+                                    <span>Ваш E-mail</span>
+                                    <input type="email" name="" placeholder="Введите E-mail" required class="text_fz18">
+                                </label>
+                            </div>
+                            <label class="form-label">
+                                <span>Сообщение</span>
+                                <textarea name=""></textarea>
+                            </label>
                         </div>
                         <div class="form-block checkboxes text_color-dark text_fz14">
                             <label class="checkboxes-item">

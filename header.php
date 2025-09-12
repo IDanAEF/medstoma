@@ -29,7 +29,7 @@
                             <li><a href="/delivery/">Доставка</a></li>
                             <li><a href="/payment/">Оплата</a></li>
                             <li><a href="/certificate/">Принимаем электронные сертификаты ФСС</a></li>
-                            <li><a href="/useful/">Полезная информация</a></li>
+                            <li><a href="/clients/">Полезная информация</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -86,7 +86,8 @@
                         <?=getBtn([
                             'text' => 'Написать нам письмо',
                             'image' => IMAGES.'icons/mail.svg',
-                            'class' => 'white'
+                            'class' => 'white',
+                            'attr' => 'data-call-modal="mailus"'
                         ])?>
                         <?=getBtn([
                             'text' => 'Заказать звонок',
@@ -278,7 +279,8 @@
                     <?=getBtn([
                         'text' => 'Написать нам письмо',
                         'image' => IMAGES.'icons/mail.svg',
-                        'class' => 'white'
+                        'class' => 'white',
+                        'attr' => 'data-call-modal="mailus"'
                     ])?>
                     <?=getBtn([
                         'text' => 'Заказать звонок',
@@ -295,7 +297,7 @@
                         <li><a href="/delivery/">Доставка</a></li>
                         <li><a href="/payment/">Оплата</a></li>
                         <li><a href="/certificate/">Принимаем электронные сертификаты ФСС</a></li>
-                        <li><a href="/useful/">Полезная информация</a></li>
+                        <li><a href="/clients/">Полезная информация</a></li>
                     </ul>
                 </nav>
             </div>
