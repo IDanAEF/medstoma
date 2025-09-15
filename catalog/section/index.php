@@ -32,6 +32,49 @@
             </div>
         </div>
     </section>
+    <section class="catalog__filter page__block pt0">
+        <div class="container">
+            <div class="catalog__filter-wrap">
+                <div class="form-label">
+                    <span>Производитель</span>
+                    <div class="checkboxes text_fz16">
+                        <label class="checkboxes-item">
+                            <input type="checkbox" name="">
+                            <div class="box"></div>
+                            <span>Coloplast</span>
+                        </label>
+                        <label class="checkboxes-item">
+                            <input type="checkbox" name="">
+                            <div class="box"></div>
+                            <span>B. Braun</span>
+                        </label>
+                        <label class="checkboxes-item">
+                            <input type="checkbox" name="">
+                            <div class="box"></div>
+                            <span>Conva Tec</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-label">
+                    <span>Цена</span>
+                    <div class="input-row">
+                        <input type="text" name="" placeholder="от">
+                        <input type="text" name="" placeholder="до">
+                    </div>
+                </div>
+                <div class="btns">
+                    <?=getBtn([
+                        'text' => 'Показать',
+                        'class' => 'red'
+                    ])?>
+                    <?=getBtn([
+                        'text' => 'Сбросить',
+                        'class' => 'light'
+                    ])?>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="catalog__list page__block pt0">
         <div class="container">
             <div class="catalog__list-sort text_fz16 select-field">

@@ -5,6 +5,9 @@
                 gap: 8px
 @media (max-width: 1400px)
     .catalog
+        &__filter
+            &-wrap
+                grid-template: auto / 1fr 1fr
         &__list
             &-items 
                 grid-template: auto / repeat(3, 1fr)
@@ -29,6 +32,11 @@
                         padding: 16px 89px
 @media (max-width: 992px)
     .catalog
+        &__filter 
+            &-wrap
+                gap: 32px
+                .checkboxes
+                    gap: 12px
         &__list 
             &-sort
                 margin-bottom: 16px
@@ -47,6 +55,9 @@
                             display: none
 @media (max-width: 768px)
     .catalog
+        &__filter 
+            &-wrap 
+                grid-template: auto / 1fr
         &__product
             &-info 
                 grid-template: auto / 1fr
@@ -80,6 +91,15 @@
                 grid-template: auto / 1fr
 @media (max-width: 576px)
     .catalog
+        &__filter 
+            .container 
+                padding: 0
+            &-wrap 
+                padding: 15px
+                border-radius: 0
+                gap: 24px
+                .input-row 
+                    grid-template: auto / 1fr
         &__product
             &-tabs 
                 &-names 

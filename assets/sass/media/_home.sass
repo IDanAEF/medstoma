@@ -1,5 +1,11 @@
 @media (max-width: 1700px)
     .home
+        &__accord
+            &-item 
+                .content
+                    &__slider
+                        .slide
+                            width: 268px
         &__products
             &-item 
                 margin-right: 8px
@@ -62,6 +68,9 @@
                 .content
                     &__grid 
                         grid-template: auto / 1fr 1fr
+                    &__slider
+                        .slide
+                            width: 256px
 @media (max-width: 1200px)
     .home
         &__promo 
@@ -110,6 +119,11 @@
                 .content
                     &__grid 
                         grid-template: auto / 1fr
+                    &__slider
+                        grid-column: unset
+                        max-width: calc(100vw - 160px)
+                        .slide
+                            width: 268px
         &__reviews
             &-title 
                 gap: 32px
@@ -126,6 +140,13 @@
                     margin-left: 0
 @media (max-width: 992px)
     .home
+        &__accord
+            &-item 
+                .content
+                    &__slider
+                        max-width: calc(100vw - 110px)
+                        .slide
+                            width: 215px
         &__products, &__reviews
             &-item 
                 width: calc((100vw - 60px) / 2)
@@ -208,6 +229,10 @@
                 margin-bottom: 12px
                 .content
                     padding: 0px 16px
+                    &__slider 
+                        max-width: calc(100vw - 92px)
+                        .slide
+                            width: 240px
                     &.active
                         padding: 16px
                 .name 
@@ -283,6 +308,10 @@
                     h2 
                         font-size: 18px
                 .content
+                    &__slider
+                        max-width: calc(100vw - 70px)
+                        .slide
+                            width: 180px
                     &__grid 
                         &-item 
                             padding: 12px

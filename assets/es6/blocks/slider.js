@@ -52,7 +52,7 @@ const slider = () => {
                     return +slider.getAttribute('data-tablet-big-vis');
                 } else if (window.innerWidth <= 1400 && slider.getAttribute('data-lap-vis')) {
                     return +slider.getAttribute('data-lap-vis');
-                } else if (window.innerWidth < 2100 && slider.getAttribute('data-pc-vis')) {
+                } else if (window.innerWidth <= 1700 && slider.getAttribute('data-pc-vis')) {
                     return +slider.getAttribute('data-pc-vis');
                 } else if (slider.getAttribute('data-tv-vis')) {
                     return +slider.getAttribute('data-tv-vis');

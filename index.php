@@ -219,13 +219,48 @@
                             <h3>Гарантия качества и соответствие медицинским стандартам</h3>
                             <p>Интернет-магазин MedStoma предлагает вам только качественную и сертифицированную продукцию, полностью соответствующую требованиям международных стандартов, предъявляемым к медицинскому оборудованию и средствам для ухода за лежачими больными. Мы гарантируем, что все товары хранятся в надлежащих условиях. Обращаем ваше внимание на то, что товары данной категории по законам не подлежат возврату и обмену, поэтому перед совершением покупки проконсультируйтесь с нашим менеджером</p>
                         </div>
-                        <!-- <div class="content__slider slider" data-tv-vis="4">
+                        <div class="content__slider slider" data-tv-vis="4" data-pc-vis="3" data-lap-vis="2" data-tablet-big-vis="1">
                             <div class="slider-list">
                                 <div class="slider-track">
-
+                                    <a href="https://medstoma.ru/img/sert1.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert1.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert2.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert2.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert3.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert3.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert4.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert4.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert5.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert5.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert6.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert6.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert7.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert7.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert8.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert8.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert9.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert9.jpg">
+                                    </a>
+                                    <a href="https://medstoma.ru/img/sert10.jpg" class="slide" data-fancybox="docs">
+                                        <img src="https://medstoma.ru/img/sert10.jpg">
+                                    </a>
                                 </div>
                             </div>
-                        </div> -->
+                            <span class="slider-arrows-item left">
+                                <img src="<?=IMAGES?>icons/slider-arrow.svg" alt="Влево">
+                            </span>
+                            <span class="slider-arrows-item right">
+                                <img src="<?=IMAGES?>icons/slider-arrow.svg" alt="Вправо">
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
