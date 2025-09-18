@@ -129,21 +129,25 @@ const other = () => {
     }
 
     try {
-        const catalogTabs = document.querySelectorAll('.catalog__product-tabs-names span'),
-              catalogTabsContent = document.querySelectorAll('.catalog__product-tabs-content');
+        const tabsField = document.querySelectorAll('.tabs-field');
 
-        const setTab = (i = 0) => {
-            catalogTabs.forEach(item => item.classList.remove('active'));
-            catalogTabsContent.forEach(item => item.classList.remove('active'));
+        tabsField.forEach(field => {
+            const tabs = field.querySelectorAll('.tabs-name'),
+                  tabsContent = field.querySelectorAll('.tabs-content');
 
-            catalogTabs[i].classList.add('active');
-            catalogTabsContent[i].classList.add('active');
-        }
+            const setTab = (i = 0) => {
+                tabs.forEach(item => item.classList.remove('active'));
+                tabsContent.forEach(item => item.classList.remove('active'));
 
-        setTab();
+                tabs[i].classList.add('active');
+                tabsContent[i].classList.add('active');
+            }
 
-        catalogTabs.forEach((tab, i) => {
-            tab.addEventListener('click', () => setTab(i)); 
+            setTab();
+
+            tabs.forEach((tab, i) => {
+                tab.addEventListener('click', () => setTab(i)); 
+            });
         });
     } catch (e) {
         console.log(e.stack);
@@ -194,6 +198,27 @@ const other = () => {
             }
 
             showScroll();
+        });
+    } catch (e) {
+        console.log(e.stack);
+    }
+
+    try {
+        const orderRadioField = document.querySelectorAll('.order-radio-field');
+
+        orderRadioField.forEach(field => {
+            const labels = field.querySelectorAll('label');
+
+            labels.forEach(label => {
+                const labelInp = label.querySelector('input');
+
+                if (labelInp.checked) label.classList.add('active');
+
+                labelInp.addEventListener('change', () => {
+                    labels.forEach(item => item.classList.remove('active'));
+                    label.classList.add('active');
+                });
+            });
         });
     } catch (e) {
         console.log(e.stack);

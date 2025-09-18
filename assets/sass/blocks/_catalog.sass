@@ -182,74 +182,8 @@
                     background: $sky200
     &__list
         &-sort
-            position: relative
             width: fit-content
             margin-bottom: 32px
-            .list
-                position: absolute
-                left: 0
-                top: calc(100% + 8px)
-                z-index: 5
-                box-shadow: 0 6px 5px -3px rgba(0, 0, 0, 0.2)
-                width: fit-content
-                max-width: unset
-                padding: 8px
-                border-radius: 12px
-                padding: 8px 12px
-                border: 1px solid $slate300
-                background: $white
-                min-width: 300px
-                opacity: 0
-                visibility: hidden
-                transition: 0.4s all
-                &.active
-                    opacity: 1
-                    visibility: visible
-                span 
-                    display: flex
-                    align-items: center
-                    justify-content: space-between
-                    gap: 8px
-                    cursor: pointer
-                    padding: 6px 8px
-                    transition: 0.4s background
-                    &::after
-                        content: ''
-                        width: 16px
-                        height: 16px
-                        min-width: 16px
-                        background: url('../images/icons/check.svg') center center/contain no-repeat
-                        opacity: 0
-                        transition: 0.4s opacity
-                    &:hover, &.active
-                        background: $slate100
-                    &.active
-                        &::after
-                            opacity: 1
-            .name 
-                display: flex
-                align-items: center
-                justify-content: space-between
-                border-radius: 12px
-                padding: 8px 12px
-                border: 1px solid $slate300
-                transition: 0.4s border
-                gap: 8px
-                width: fit-content
-                min-width: 205px
-                cursor: pointer
-                & > *
-                    pointer-events: none
-                img 
-                    width: 16px
-                    min-width: 16px
-                    transform: rotate(90deg)
-                    transition: 0.4s transform
-                &:hover, &.active
-                    border: 1px solid $color
-                &.active
-                    img 
-                        transform: rotate(-90deg)
         &-items
             display: grid
             grid-template: auto / repeat(4, 1fr)

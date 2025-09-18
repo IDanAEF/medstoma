@@ -1,0 +1,113 @@
+.order
+    &__form 
+        &-delivery, &-payment 
+            max-width: 800px
+            &-item 
+                position: relative
+                display: flex
+                align-items: flex-start
+                gap: 16px
+                cursor: pointer
+                margin-bottom: 16px
+                &:last-child
+                    margin-bottom: 0 !important
+                input
+                    position: absolute
+                    left: 0
+                    top: 0
+                    opacity: 0
+                    pointer-events: none
+                img
+                    width: 140px
+                    min-width: 140px
+                    aspect-ratio: 2
+                    object-fit: cover
+                    border-radius: 12px
+                    border: 2px solid $slate400
+                    transition: 0.4s border
+                    padding: 2px
+                .text
+                    span 
+                        display: block
+                        margin-top: 12px
+                &:hover, &.active
+                    img 
+                        border: 4px solid $colorLight
+        &-types 
+            &-content
+                display: none
+                max-width: 800px
+                &.active
+                    display: block
+            &-names
+                display: flex
+                align-items: center
+                gap: 16px 
+                span 
+                    text-align: center
+                    padding: 16px 20px
+                    background: $slate100
+                    transition: 0.4s all
+                    border-radius: 12px
+                    cursor: pointer
+                    color: $colorDark
+                    &:hover, &.active
+                        background: $color
+                        color: $white
+    &__cart 
+        &-result 
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            background: $sky100
+            padding: 16px
+            gap: 32px
+        &-btns
+            display: flex
+            align-items: center
+            gap: 8px
+        &-table
+            .home__products
+                &-item
+                    width: 100%
+                    max-width: 100%
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: center
+                    border-radius: 0
+                    border-right: none
+                    border-left: none
+                    gap: 32px
+                    margin: 0
+                    &:not(:first-child)
+                        border-top: none
+                    .preview
+                        width: 200px
+                        min-width: 200px
+                        aspect-ratio: 1
+                        height: unset
+                        margin: 0
+                    .text-block
+                        flex: 1
+                        margin-right: auto
+                        h3 
+                            display: block
+                            overflow: visible
+                            -webkit-line-clamp: unset
+                            line-clamp: unset
+                            -webkit-box-orient: unset
+                    .price
+                        margin-top: 0
+                    .delete
+                        width: 30px
+                        min-width: 30px
+                        display: flex
+                        cursor: pointer
+                        img 
+                            width: 100%
+                            filter: brightness(0)
+                            transition: 0.4s fitler
+                        &:hover, &.active 
+                            img 
+                                filter: none

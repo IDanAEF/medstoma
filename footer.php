@@ -93,7 +93,7 @@
                             </div>
                             <label class="form-label">
                                 <span>Введите ваш вопрос или комментарий</span>
-                                <textarea name=""></textarea>
+                                <textarea name="" class="text_fz18"></textarea>
                             </label>
                         </div>
                         <div class="form-block checkboxes text_color-dark text_fz14">
@@ -175,7 +175,7 @@
                             </div>
                             <label class="form-label">
                                 <span>Сообщение</span>
-                                <textarea name=""></textarea>
+                                <textarea name="" class="text_fz18"></textarea>
                             </label>
                         </div>
                         <div class="form-block checkboxes text_color-dark text_fz14">

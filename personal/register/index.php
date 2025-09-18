@@ -49,6 +49,13 @@
                     <div class="form-label">
                         <?=getBtn(['text' => 'Зарегистрироваться'])?>
                     </div>
+                    <div class="form-block checkboxes text_color-dark text_fz14">
+                        <label class="checkboxes-item">
+                            <input type="checkbox" name="" required>
+                            <div class="box"></div>
+                            <span>Принимаю <a href="/privacy/" class="text_color-light">соглашение о конфиденциальности</a> и соглашаюсь с обработкой персональных данных</span>
+                        </label>
+                    </div>
                     <div class="form-label">
                         <a href="/personal/" class="text_underline">
                             Авторизация

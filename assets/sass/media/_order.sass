@@ -1,0 +1,96 @@
+@media (max-width: 1200px)
+    .order
+        &__cart
+            &-result 
+                padding: 10px 15px
+            &-table 
+                .home__products-item
+                    gap: 16px
+                    padding: 10px 0
+                    .preview
+                        width: 150px
+                        min-width: 150px
+@media (max-width: 992px)
+    .order
+        &__cart
+            &-table
+                .home__products-item
+                    gap: 8px 16px
+                    flex-wrap: wrap
+                    justify-content: flex-end
+                    .text-block
+                        width: calc(100% - 150px - 16px)
+                        flex: unset
+@media (max-width: 768px)
+    .order
+        &__form 
+            &-delivery, &-payment
+                &-item
+                    .text
+                        span
+                            margin-top: 8px
+@media (max-width: 576px)
+    .order
+        &__form 
+            &-delivery, &-payment
+                &-item 
+                    gap: 10px
+                    img 
+                        width: 100px
+                        min-width: 100px
+            &-types
+                &-names 
+                    gap: 8px
+                    span 
+                        padding: 12px 16px
+        &__cart
+            &-table
+                .home__products-item
+                    gap: 8px
+                    .delete
+                        width: 20px
+                        min-width: 20px
+                    .preview
+                        width: 90px
+                        min-width: 90px
+                    .text-block
+                        width: calc(100% - 90px - 16px)
+                    .bottom
+                        .counter
+                            .num
+                                min-width: 38px
+                            .decrease, .increase, .num
+                                height: 35px
+            &-result
+                gap: 16px
+@media (max-width: 400px)
+    .order
+        &__form
+            &-btn 
+                width: 100%
+            &-delivery, &-payment
+                &-item
+                    margin-bottom: 24px
+                    flex-direction: column
+                    img 
+                        width: 150px
+                        min-width: 150px
+            &-types
+                &-names
+                    flex-direction: column
+                    span 
+                        width: 100%
+        &__cart
+            &-btns 
+                flex-direction: column
+                .btn 
+                    width: 100%
+            &-table
+                .home__products-item
+                    .price
+                        font-size: 14px
+                    .text-block 
+                        .article
+                            font-size: 12px
+                        h3
+                            font-size: 14px
