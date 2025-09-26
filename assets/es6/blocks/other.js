@@ -14,6 +14,37 @@ const other = () => {
         document.querySelector('html').classList.toggle('fixed');
     }
 
+    const getCookie = (name) => {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+
+        return matches ? decodeURIComponent(matches[1]) : '';
+    }
+
+    const setCookie = (name, value, options = {}) => {
+        options = {
+            path: '/',
+            ...options
+        };
+
+        if (options.expires instanceof Date) 
+            options.expires = options.expires.toUTCString();
+
+        let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+        for (let optionKey in options) {
+            updatedCookie += "; " + optionKey;
+
+            let optionValue = options[optionKey];
+            if (optionValue !== true) {
+                updatedCookie += "=" + optionValue;
+            }
+        }
+
+        document.cookie = updatedCookie;
+    }
+
     try {
         const bodyClickContent = document.querySelectorAll('.body-click-content'),
               bodyClickTarget = document.querySelectorAll('.body-click-target');
@@ -220,6 +251,29 @@ const other = () => {
                 });
             });
         });
+    } catch (e) {
+        console.log(e.stack);
+    }
+
+    try {
+        const cookieBlock = document.querySelector('.cookie'),
+              cookieBtn = cookieBlock.querySelector('.cookie__btn'),
+              cookieCheckbox = cookieBlock.querySelector('input[name="cookie-check"]');
+
+        if (!getCookie('cookie-check')) {
+            cookieBlock.classList.add('active');
+
+            cookieCheckbox.addEventListener('change', () => {
+                if (cookieCheckbox.checked)
+                    cookieBtn.classList.remove('disable');
+                else cookieBtn.classList.add('disable');
+            });
+
+            cookieBtn.addEventListener('click', () => {
+                setCookie('cookie-check', '1', {'max-age': 3600*24*31});
+                cookieBlock.classList.remove('active');
+            });
+        }
     } catch (e) {
         console.log(e.stack);
     }

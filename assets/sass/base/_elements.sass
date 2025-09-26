@@ -481,3 +481,36 @@ h6
         &.active
             img 
                 transform: rotate(-90deg)
+.cookie
+    position: fixed
+    z-index: 12
+    width: calc(100% - 200px)
+    max-width: 1720px
+    padding: 24px
+    background: $white
+    border-radius: 12px
+    left: 50%
+    bottom: 24px
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08)
+    opacity: 0
+    visibility: hidden
+    transform: translate(-50%, 100%)
+    transition: 0.7s all 0.4s
+    &.active
+        opacity: 1
+        visibility: visible
+        transform: translate(-50%, 0)
+    &__top 
+        margin-bottom: 8px
+        strong 
+            display: block
+            margin-bottom: 8px
+    &__bott
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        gap: 24px
+        .btns 
+            display: flex
+            align-items: center
+            gap: 8px

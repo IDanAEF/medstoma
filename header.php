@@ -207,7 +207,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="header__cats text_fz24">
+                <div class="header__cats text_fz16">
                     <a href="/catalog/section/" class="header__cats-item">
                         <img src="<?=IMAGES?>header-cat1.svg" alt="Калоприемники">
                         <span>Калоприемники</span>

@@ -212,6 +212,34 @@
         </div>
     </div>
 
+    <div class="cookie">
+        <div class="cookie__top">
+            <strong class="text_fw600">Cookies</strong>
+            <span class="text_fz16 text_fw600 text_color-dark">
+                Чтобы сайт работал корректно и был вам полезен, мы используем файлы cookie. 
+            </span>
+        </div>
+        <div class="cookie__bott">
+            <div class="checkboxes text_color-dark text_fz14">
+                <label class="checkboxes-item">
+                    <input type="checkbox" name="cookie-check" required>
+                    <div class="box"></div>
+                    <span>Я согласен(-на) на использование файлов cookies</span>
+                </label>
+            </div>
+            <div class="btns">
+                <?=getBtn([
+                    'text' => 'Принять',
+                    'class' => 'cookie__btn disable'
+                ])?>
+                <?=getBtn([
+                    'link' => '/privacy/',
+                    'class' => 'white'
+                ])?>
+            </div>
+        </div>
+    </div>
+
     <script src="/assets/js/fancybox.umd.js"></script>
     <script src="/assets/js/script.js"></script>
     <script src="/custom.js"></script>
