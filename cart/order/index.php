@@ -316,7 +316,7 @@
                         <label class="checkboxes-item">
                             <input type="checkbox" name="" required>
                             <div class="box"></div>
-                            <span>Принимаю <a href="/privacy/" class="text_color-light">соглашение о конфиденциальности</a> и соглашаюсь с обработкой персональных данных</span>
+                            <span>Принимаю <a href="/privacy/" class="text_color-light">соглашение о конфиденциальности</a> и соглашаюсь с <a href="/privacy/" class="text_color-light">обработкой персональных данных</a></span>
                         </label>
                     </div>
                 </div>

@@ -19,7 +19,6 @@
                 <p><a href="/clients/indemnity/">Компенсации</a></p>
                 <p><a href="/clients/opt/">Оптовым покупателям</a></p>
                 <p><a href="/articles/">Статьи</a></p>
-                <p><a href="/clients/forum/">Форум</a></p>
             </div>
         </div>
     </section>

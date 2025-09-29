@@ -98,7 +98,7 @@
                         </div>
                         <div class="form-block checkboxes text_color-dark text_fz14">
                             <label class="checkboxes-item">
-                                <input type="checkbox" name="" required>
+                                <input type="checkbox" name="">
                                 <div class="box"></div>
                                 <span>Я согласен на получение рекламной информации в соответствии c <a href="/privacy/" class="text_color-light">Согласием на рекламу</a></span>
                             </label>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="form-block checkboxes text_color-dark text_fz14">
                             <label class="checkboxes-item">
-                                <input type="checkbox" name="" required>
+                                <input type="checkbox" name="">
                                 <div class="box"></div>
                                 <span>Я согласен на получение рекламной информации в соответствии c <a href="/privacy/" class="text_color-light">Согласием на рекламу</a></span>
                             </label>
@@ -180,7 +180,7 @@
                         </div>
                         <div class="form-block checkboxes text_color-dark text_fz14">
                             <label class="checkboxes-item">
-                                <input type="checkbox" name="" required>
+                                <input type="checkbox" name="">
                                 <div class="box"></div>
                                 <span>Я согласен на получение рекламной информации в соответствии c <a href="/privacy/" class="text_color-light">Согласием на рекламу</a></span>
                             </label>
