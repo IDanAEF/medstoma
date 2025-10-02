@@ -127,6 +127,7 @@
                     </form>
                     <div class="header__bar-menu">
                         <a href="/cart/">
+                            <span>10</span>
                             <img src="<?=IMAGES?>icons/cart.svg" alt="Корзина">
                         </a>
                         <a href="/personal/">

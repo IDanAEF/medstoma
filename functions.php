@@ -130,14 +130,15 @@
                 <?php if(!$order) : ?>
                     <div class="counter">
                         <span class="decrease"></span>
-                        <span class="num">1</span>
+                        <input type="text" name="" class="num" value="1">
                         <span class="increase"></span>
                     </div>
                 <?php endif; ?>
                 <?=getBtn([
                     'text' => $order ? 'Под заказ' : 'В корзину',
                     'image' => IMAGES.'icons/'.($order ? 'car' : 'cart').'.svg',
-                    'class' => ($order ? 'light ' : '').'small text_fz16'
+                    'class' => ($order ? 'light ' : '').'small text_fz16',
+                    'attr' => $order ? 'data-call-modal="order"' : 'data-call-modal="place-in-cart"'
                 ])?>
             </div>
         </article>

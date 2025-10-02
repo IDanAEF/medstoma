@@ -101,7 +101,7 @@
                                 </label>
                                 <label class="form-label">
                                     <span>Телефон:</span>
-                                    <input type="text" name="" required class="text_fz18">
+                                    <input type="tel" name="" required class="text_fz18">
                                 </label>
                             </div>
                             <div class="form-block">
@@ -112,10 +112,19 @@
                                     <span>Индекс:</span>
                                     <input type="text" name="" required class="text_fz18">
                                 </label>
-                                <label class="form-label">
+                                <div class="form-label">
                                     <span>Город:</span>
-                                    <input type="text" name="" required class="text_fz18">
-                                </label>
+                                    <div class="select-field big text_fz16">
+                                        <div class="select-field-name body-click-target" data-default="Выберите город">
+                                            <span class="text_color-dark">Выберите город</span>
+                                            <img src="<?=IMAGES?>icons/small-arrow.svg" alt="">
+                                        </div>
+                                        <div class="select-field-list body-click-content">
+                                            <input type="text" placeholder="Поиск...">
+                                            <?php require '../../includes/cities.php' ?>
+                                        </div>
+                                    </div>
+                                </div>
                                 <label class="form-label">
                                     <span>Адрес доставки:</span>
                                     <input type="text" name="" required class="text_fz18">
@@ -159,7 +168,7 @@
                             </label>
                             <label class="form-label">
                                 <span>Телефон:</span>
-                                <input type="text" name="" required class="text_fz18">
+                                <input type="tel" name="" required class="text_fz18">
                             </label>
                             <label class="form-label">
                                 <span>Факс:</span>

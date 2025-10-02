@@ -19,7 +19,8 @@
                     <?=getBtn([
                         'text' => 'Обратный звонок',
                         'class' => 'red',
-                        'image' => IMAGES.'icons/phone.svg'
+                        'image' => IMAGES.'icons/phone.svg',
+                        'attr' => 'data-call-modal="callback"'
                     ])?>
                 </div>
             </div>

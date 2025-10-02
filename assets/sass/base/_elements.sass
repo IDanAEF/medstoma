@@ -350,10 +350,13 @@ h6
         display: grid
         grid-template: auto / 1fr 1fr 
         gap: 24px
+        & > .btn 
+            width: 100%
         .form-label 
             margin: 0 !important
     &-label 
-        display: block
+        display: flex
+        flex-direction: column
         & > span 
             display: block
             margin-bottom: 8px
@@ -436,6 +439,9 @@ h6
         &.active
             opacity: 1
             visibility: visible
+        input
+            padding: 6px 8px
+            margin-bottom: 4px
         span 
             display: flex
             align-items: center
@@ -481,6 +487,11 @@ h6
         &.active
             img 
                 transform: rotate(-90deg)
+    &.big 
+        flex: 1
+        .select-field-name
+            height: 100%
+            width: 100%
 .cookie
     position: fixed
     z-index: 12

@@ -58,18 +58,20 @@
                     <div class="btns">
                         <div class="counter">
                             <span class="decrease"></span>
-                            <span class="num">1</span>
+                            <input type="text" name="" class="num" value="1">
                             <span class="increase"></span>
                         </div>
                         <?=getBtn([
                             'text' => 'В корзину',
-                            'image' => IMAGES.'icons/cart.svg'
+                            'image' => IMAGES.'icons/cart.svg',
+                            'attr' => 'data-call-modal="place-in-cart"'
                         ])?>
                     </div>
                     <?=getBtn([
                         'text' => 'Заказать в 1 клик',
                         'image' => IMAGES.'icons/phone-blue.svg',
-                        'class' => 'light one-click'
+                        'class' => 'light one-click',
+                        'attr' => 'data-call-modal="order"'
                     ])?>
                     <div class="list text_fz16 text_color-dark">
                         <span>

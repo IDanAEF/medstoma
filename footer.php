@@ -66,6 +66,28 @@
     </div>
 
     <div class="modal">
+        <div class="modal__item" data-modal="place-in-cart">
+            <div class="modal__close"></div>
+            <div class="modal__wrap small">
+                <div class="form">
+                    <div class="form-head text_center text_fz24">
+                        Товар добавлен в козину
+                    </div>
+                    <div class="form-body">
+                        <div class="form-row">
+                            <?=getBtn([
+                                'text' => 'Перейти в корзину',
+                                'link' => '/cart/'
+                            ])?>
+                            <?=getBtn([
+                                'text' => 'Продолжить покупки',
+                                'class' => 'light modal__hide'
+                            ])?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="modal__item" data-modal="order">
             <div class="modal__close"></div>
             <div class="modal__wrap">
@@ -73,18 +95,14 @@
                     <div class="form-head text_fz24">Оставьте заявку или задайте вопрос</div>
                     <div class="form-body">
                         <div class="form-block">
+                            <label class="form-label">
+                                <span>Ваше имя</span>
+                                <input type="text" name="" placeholder="Введите имя" required class="text_fz18">
+                            </label>
                             <div class="form-row">
                                 <label class="form-label">
-                                    <span>Название товара</span>
-                                    <input type="text" name="" placeholder="Введите товар" required class="text_fz18">
-                                </label>
-                                <label class="form-label">
-                                    <span>Номер телефона*</span>
+                                    <span>Номер телефона</span>
                                     <input type="tel" name="" placeholder="Введите номер" required class="text_fz18">
-                                </label>
-                                <label class="form-label">
-                                    <span>Ваше имя</span>
-                                    <input type="text" name="" placeholder="Введите имя" required class="text_fz18">
                                 </label>
                                 <label class="form-label">
                                     <span>Ваш E-mail</span>

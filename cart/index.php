@@ -33,7 +33,7 @@
                     <div class="bottom">
                         <div class="counter">
                             <span class="decrease"></span>
-                            <span class="num">1</span>
+                            <input type="text" name="" class="num" value="1">
                             <span class="increase"></span>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                     <div class="bottom">
                         <div class="counter">
                             <span class="decrease"></span>
-                            <span class="num">1</span>
+                            <input type="text" name="" class="num" value="1">
                             <span class="increase"></span>
                         </div>
                     </div>
@@ -80,6 +80,10 @@
                     'text' => 'Пересчитать',
                     'class' => 'light'
                 ])?>
+            </div>
+            <div class="default-text order__cart-empty">
+                <p>В вашей корзине ещё нет товаров.</p>
+                <p><a href="/">Начать покупки</a></p>
             </div>
         </div>
     </section>

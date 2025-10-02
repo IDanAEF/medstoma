@@ -65,6 +65,7 @@ const forms = () => {
                   fieldNameDefault = fieldName.getAttribute('data-default').trim(),
                   fieldNameSpan = fieldName.querySelector('span'),
                   fieldList = field.querySelector('.select-field-list'),
+                  fieldSearch = fieldList.querySelector('input'),
                   fieldListItems = fieldList.querySelectorAll('span'),
                   fieldMulti = field.classList.contains('multi');
 
@@ -81,6 +82,16 @@ const forms = () => {
 
                     if (!fieldMulti && !listItem.classList.contains('active') && fieldNameDefault) 
                         fieldNameSpan.textContent = fieldNameDefault;
+                });
+            });
+
+            fieldSearch && fieldSearch.addEventListener('input', () => {
+                let searchText = fieldSearch.value.trim();
+
+                fieldListItems.forEach(item => {
+                    if (!searchText || item.textContent.trim().indexOf(searchText) != -1)
+                        item.style.display = '';
+                    else item.style.display = 'none';
                 });
             });
         });
